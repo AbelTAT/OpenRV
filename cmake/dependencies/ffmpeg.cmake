@@ -261,23 +261,9 @@ SET(${_force_rebuild}
 # customize the FFmpeg config options via the RV_FFMPEG_CONFIG_OPTIONS cmake property.
 IF(NOT RV_FFMPEG_CONFIG_OPTIONS)
   SET(NON_FREE_DECODERS_TO_DISABLE
-      "aac"
-      "aac_at"
-      "aac_fixed"
-      "aac_latm"
       "bink"
       "binkaudio_dct"
       "binkaudio_rdft"
-      "dnxhd"
-      "dvvideo"
-      "prores"
-      "qtrle"
-      "vp9"
-      "vp9_cuvid"
-      "vp9_mediacodec"
-      "vp9_qsv"
-      "vp9_rkmpp"
-      "vp9_v4l2m2m"
   )
 
   FOREACH(
@@ -292,13 +278,6 @@ IF(NOT RV_FFMPEG_CONFIG_OPTIONS)
   ENDFOREACH()
 
   SET(NON_FREE_ENCODERS_TO_DISABLE
-      "aac"
-      "aac_mf"
-      "dnxhd"
-      "dvvideo"
-      "prores"
-      "qtrle"
-      "vp9_qsv"
       "vp9_vaapi"
   )
   FOREACH(
